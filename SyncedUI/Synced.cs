@@ -5,21 +5,23 @@ namespace SyncedUI
 {
     public static class Synced
     {
+        public static SyncedComponent Image(string content)
+        {
+            return new Image(content);
+        }
+        public static SyncedComponent Stack()
+        {
+            return new Stack();
+        }
         public static SyncedComponent Text(string content)
         {
-            var component = new Text(content);
-
-            SyncedWindow.Get().AddChild(component);
-
-            return component;
+            return new Text(content);
         }
-        public static SyncedComponent TextSection()
+        public static SyncedComponent View()
         {
-            var component = new TextSection();
-
-            SyncedWindow.Get().AddChild(component);
-
-            return component;
+            View view = new View();
+            SyncedWindow.Get().AddChild(view);
+            return view;
         }
     }
 }

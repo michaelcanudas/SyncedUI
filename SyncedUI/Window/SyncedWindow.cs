@@ -24,6 +24,7 @@ namespace SyncedUI.Window
 
         public void Render(Graphics graphics)
         {
+            graphics.Transform = new System.Drawing.Drawing2D.Matrix(1, 0, 0, 1, 0, 0);
             foreach (var child in children)
             {
                 child.Render(graphics);
