@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fVWT5HzOadD1iCyrnZTVDsoyTNZdNqAgZNF8bG5fSMpW/IpQm4K71kB/tOPE8OW+8rEWuRaCU6LqTdiX6dWcvQ==",
+  "dgSpecHash": "VItR9zngiGTRacNW972huAt8HFEIKP1bbxdZmZ3purWVNAK4GALQ2Y7EkNuPMh8Q6LKKDcsU1rcxYTDt289kPQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Michael\\Documents\\SyncedUI\\SyncedUI.csproj",
+  "projectFilePath": "C:\\Users\\Michael\\Documents\\SyncedUI\\SyncedUIDemo\\SyncedUIDemo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Michael\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\Michael\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
