@@ -3,9 +3,14 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
+    <Configurations>Debug;Release;Linux - Debug;Linux - Release</Configurations>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE;WIN32</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Linux - Debug|AnyCPU'">
     <DefineConstants>TRACE;WIN32</DefineConstants>
   </PropertyGroup>
 
@@ -14,80 +19,80 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SyncedUI\SyncedUI.csproj" />
+    <ProjectReference Include="..\..\SyncedUI\SyncedUI.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="image2.png">
+    <None Update="Images\image2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="SFUIText-Bold.otf">
+    <None Update="Fonts\SFUIText-Bold.otf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="SFUIText-BoldG1.otf">
+    <None Update="Fonts\SFUIText-BoldG1.otf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="SFUIText-BoldG2.otf">
+    <None Update="Fonts\SFUIText-BoldG2.otf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="SFUIText-BoldG3.otf">
+    <None Update="Fonts\SFUIText-BoldG3.otf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="SFUIText-BoldItalicG1.otf">
+    <None Update="Fonts\SFUIText-BoldItalicG1.otf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="SFUIText-BoldItalicG2.otf">
+    <None Update="Fonts\SFUIText-BoldItalicG2.otf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="SFUIText-BoldItalicG3.otf">
+    <None Update="Fonts\SFUIText-BoldItalicG3.otf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="SFUIText-Heavy.otf">
+    <None Update="Fonts\SFUIText-Heavy.otf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="SFUIText-HeavyItalic.otf">
+    <None Update="Fonts\SFUIText-HeavyItalic.otf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="SFUIText-Italic.otf">
+    <None Update="Fonts\SFUIText-Italic.otf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="SFUIText-ItalicG1.otf">
+    <None Update="Fonts\SFUIText-ItalicG1.otf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="SFUIText-ItalicG2.otf">
+    <None Update="Fonts\SFUIText-ItalicG2.otf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="SFUIText-ItalicG3.otf">
+    <None Update="Fonts\SFUIText-ItalicG3.otf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="SFUIText-Light.otf">
+    <None Update="Fonts\SFUIText-Light.otf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="SFUIText-LightItalic.otf">
+    <None Update="Fonts\SFUIText-LightItalic.otf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="SFUIText-Medium.otf">
+    <None Update="Fonts\SFUIText-Medium.otf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="SFUIText-MediumItalic.otf">
+    <None Update="Fonts\SFUIText-MediumItalic.otf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="SFUIText-Regular.otf">
+    <None Update="Fonts\SFUIText-Regular.otf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="SFUIText-RegularG1.otf">
+    <None Update="Fonts\SFUIText-RegularG1.otf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="SFUIText-RegularG2.otf">
+    <None Update="Fonts\SFUIText-RegularG2.otf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="SFUIText-RegularG3.otf">
+    <None Update="Fonts\SFUIText-RegularG3.otf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="SFUIText-Semibold.otf">
+    <None Update="Fonts\SFUIText-Semibold.otf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="SFUIText-SemiboldItalic.otf">
+    <None Update="Fonts\SFUIText-SemiboldItalic.otf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
