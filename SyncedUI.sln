@@ -9,18 +9,28 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SyncedUIDemo", "Examples\Sy
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
+		Linux - Debug|Any CPU = Linux - Debug|Any CPU
+		Linux - Release|Any CPU = Linux - Release|Any CPU
+		Windows - Debug|Any CPU = Windows - Debug|Any CPU
+		Windows - Release|Any CPU = Windows - Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B9C878F0-ECE4-4C0F-BD4B-2B46CF708012}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B9C878F0-ECE4-4C0F-BD4B-2B46CF708012}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B9C878F0-ECE4-4C0F-BD4B-2B46CF708012}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B9C878F0-ECE4-4C0F-BD4B-2B46CF708012}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CA0B1515-A162-49F8-A2A8-FC4C9C41E878}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CA0B1515-A162-49F8-A2A8-FC4C9C41E878}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CA0B1515-A162-49F8-A2A8-FC4C9C41E878}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CA0B1515-A162-49F8-A2A8-FC4C9C41E878}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9C878F0-ECE4-4C0F-BD4B-2B46CF708012}.Linux - Debug|Any CPU.ActiveCfg = Linux - Debug|Any CPU
+		{B9C878F0-ECE4-4C0F-BD4B-2B46CF708012}.Linux - Debug|Any CPU.Build.0 = Linux - Debug|Any CPU
+		{B9C878F0-ECE4-4C0F-BD4B-2B46CF708012}.Linux - Release|Any CPU.ActiveCfg = Linux - Release|Any CPU
+		{B9C878F0-ECE4-4C0F-BD4B-2B46CF708012}.Linux - Release|Any CPU.Build.0 = Linux - Release|Any CPU
+		{B9C878F0-ECE4-4C0F-BD4B-2B46CF708012}.Windows - Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9C878F0-ECE4-4C0F-BD4B-2B46CF708012}.Windows - Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9C878F0-ECE4-4C0F-BD4B-2B46CF708012}.Windows - Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9C878F0-ECE4-4C0F-BD4B-2B46CF708012}.Windows - Release|Any CPU.Build.0 = Release|Any CPU
+		{CA0B1515-A162-49F8-A2A8-FC4C9C41E878}.Linux - Debug|Any CPU.ActiveCfg = Linux - Debug|Any CPU
+		{CA0B1515-A162-49F8-A2A8-FC4C9C41E878}.Linux - Debug|Any CPU.Build.0 = Linux - Debug|Any CPU
+		{CA0B1515-A162-49F8-A2A8-FC4C9C41E878}.Linux - Release|Any CPU.ActiveCfg = Linux - Release|Any CPU
+		{CA0B1515-A162-49F8-A2A8-FC4C9C41E878}.Linux - Release|Any CPU.Build.0 = Linux - Release|Any CPU
+		{CA0B1515-A162-49F8-A2A8-FC4C9C41E878}.Windows - Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA0B1515-A162-49F8-A2A8-FC4C9C41E878}.Windows - Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA0B1515-A162-49F8-A2A8-FC4C9C41E878}.Windows - Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA0B1515-A162-49F8-A2A8-FC4C9C41E878}.Windows - Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
