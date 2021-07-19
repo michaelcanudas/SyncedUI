@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 
-namespace SyncedUI.Components
+namespace SyncedUI
 {
     public class Image : SyncedComponent
     {

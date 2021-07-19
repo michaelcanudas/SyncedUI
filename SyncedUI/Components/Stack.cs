@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 
-namespace SyncedUI.Components
+namespace SyncedUI
 {
     public class Stack : SyncedParentComponent
     {

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SyncedUI.Components
+namespace SyncedUI
 {
     public class View : SyncedParentComponent
     {

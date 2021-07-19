@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Drawing.Text;
 
-namespace SyncedUI.Components
+namespace SyncedUI
 {
     public class Text : SyncedComponent
     {
