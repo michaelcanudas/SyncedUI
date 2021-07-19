@@ -1,6 +1,4 @@
-﻿using SyncedUI.Components;
-using SyncedUI.Window;
-
+﻿
 namespace SyncedUI
 {
     public static class Synced

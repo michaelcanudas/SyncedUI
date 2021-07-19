@@ -4,14 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-#if UBUNTU
-
-namespace SyncedUI.Window
+namespace SyncedUI.Platforms
 {
-    public partial class Window
+    public enum MessageBoxType
     {
-        
+        Ok,
+        OkCancel,
+        YesNo,
+        RetryCancel
     }
 }
-
-#endif

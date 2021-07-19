@@ -4,9 +4,9 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 
-namespace SyncedUI.Window
+namespace SyncedUI
 {
-    public partial class SyncedWindow : IDisposable
+    public partial class SyncedWindow
     {
         private static SyncedWindow instance;
 
@@ -18,12 +18,11 @@ namespace SyncedUI.Window
                 throw new Exception();
 
             instance = this;
-
-            Initialize();
         }
 
         public void Render(Graphics graphics)
         {
+            graphics.Clear(Color.White);
             graphics.Transform = new System.Drawing.Drawing2D.Matrix(1, 0, 0, 1, 0, 0);
             foreach (var child in children)
             {
@@ -45,15 +44,5 @@ namespace SyncedUI.Window
         {
             children.Add(comp);
         }
-
-        private partial void Initialize();
-
-        public partial Graphics CreateGraphics();
-
-        public partial void HandleEvents();
-
-        public partial bool IsOpen();
-
-        public partial void Dispose();
     }
 }
