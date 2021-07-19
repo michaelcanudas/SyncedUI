@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SyncedUI", "SyncedUI\SyncedUI.csproj", "{B9C878F0-ECE4-4C0F-BD4B-2B46CF708012}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SyncedUIDemo", "SyncedUIDemo\SyncedUIDemo.csproj", "{2F3D4B8A-9438-4CB1-A5F6-68FB8B29AE0A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SyncedUIDemo", "Examples\SyncedUIDemo\SyncedUIDemo.csproj", "{CA0B1515-A162-49F8-A2A8-FC4C9C41E878}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{B9C878F0-ECE4-4C0F-BD4B-2B46CF708012}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9C878F0-ECE4-4C0F-BD4B-2B46CF708012}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9C878F0-ECE4-4C0F-BD4B-2B46CF708012}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2F3D4B8A-9438-4CB1-A5F6-68FB8B29AE0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2F3D4B8A-9438-4CB1-A5F6-68FB8B29AE0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2F3D4B8A-9438-4CB1-A5F6-68FB8B29AE0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2F3D4B8A-9438-4CB1-A5F6-68FB8B29AE0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA0B1515-A162-49F8-A2A8-FC4C9C41E878}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA0B1515-A162-49F8-A2A8-FC4C9C41E878}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA0B1515-A162-49F8-A2A8-FC4C9C41E878}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA0B1515-A162-49F8-A2A8-FC4C9C41E878}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
