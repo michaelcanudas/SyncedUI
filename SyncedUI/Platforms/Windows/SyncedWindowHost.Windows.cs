@@ -12,6 +12,7 @@ using static SyncedUI.Platforms.WindowsInterop;
 
 namespace SyncedUI.Platforms
 {
+    // Windows-Specific code for SycnedWindowHost. Creates and manages a window.
     internal sealed unsafe partial class SyncedWindowHost
     {
         private const string WindowClassName = "DemoRendererClass";
@@ -120,6 +121,11 @@ namespace SyncedUI.Platforms
             hosts.Remove(this.hwnd);
             DestroyWindow(hwnd);
             FreeLibrary(hInstance);
+        }
+
+        private partial IntPtr GetNativeWindowHandle()
+        {
+            return new IntPtr(hwnd);
         }
     }
 }

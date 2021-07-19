@@ -63,5 +63,6 @@ namespace SyncedUI.Platforms
         private partial void HandleWindowEvents();
         private partial bool WindowIsOpen();
         private partial void DisposeUnmanaged();
+        private partial IntPtr GetNativeWindowHandle();
     }
 }
