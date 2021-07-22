@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SyncedUI.Platforms;
+using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Text;
 
@@ -6,6 +8,7 @@ namespace SyncedUI
 {
     public class Text : SyncedComponent
     {
+        private static SolidBrush brush = new SolidBrush(default);
         string content;
         public Text(string content)
         {
@@ -14,20 +17,24 @@ namespace SyncedUI
 
         public override void Render(Graphics graphics)
         {
-            Font genFont;
-            if (customFont.GetValueOrDefault())
-            {
-                PrivateFontCollection pfc = new PrivateFontCollection();
-                pfc.AddFontFile(font);
-                genFont = new Font(pfc.Families[0], fontSize.GetValueOrDefault());
-            }
-            else
-            {
-                genFont = new Font(font, fontSize.GetValueOrDefault());
-            }
+            //Font genFont;
+            //if (customFont.GetValueOrDefault())
+            //{
+            //    var pfc = new PrivateFontCollection();
+            //    pfc.AddFontFile(font);
+            //    genFont = new Font(pfc.Families[0], fontSize.GetValueOrDefault());
+            //}
+            //else
+            //{
+            //    genFont = new Font(font, fontSize.GetValueOrDefault());
+            //}
 
-            SolidBrush brush = new SolidBrush(color.GetValueOrDefault());
-            genFont = new Font(genFont, fontStyle);
+            //genFont = new Font(genFont, fontStyle);
+
+            graphics.TextRenderingHint |= TextRenderingHint.AntiAlias;
+
+            brush.Color = color.GetValueOrDefault();
+            var genFont = ResourceCache.Fonts.Load(font, (int)fontSize.GetValueOrDefault(), fontStyle);
 
             if (width == null)
             {
