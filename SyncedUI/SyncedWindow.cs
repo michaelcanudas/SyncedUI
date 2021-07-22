@@ -1,6 +1,4 @@
-﻿// Window.cs - Declares api for Window class using partial methods to ensure consistency between platforms
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 
@@ -33,6 +31,11 @@ namespace SyncedUI
         public virtual void Layout()
         {
 
+        }
+
+        public void ClearChildren()
+        {
+            children.Clear();
         }
 
         public static SyncedWindow Get()

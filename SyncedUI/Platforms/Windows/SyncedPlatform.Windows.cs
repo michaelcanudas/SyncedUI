@@ -1,7 +1,8 @@
 ﻿using System;
-using static SyncedUI.Platforms.WindowsInterop;
 
 #if WIN32
+
+using static SyncedUI.Platforms.WindowsInterop;
 
 namespace SyncedUI.Platforms
 {
@@ -32,7 +33,7 @@ namespace SyncedUI.Platforms
 
             var result = WindowsInterop.MessageBox(null, description, title, flags);
 
-            return result == 6 || result == 4 || result == 1; // return value is either IDYES, IDRETRY, or IDOK if we should return true;
+            return result == 6 || result == 4 || result == 1; // return value is either IDYES, IDRETRY, or IDOK if we should return true
         }
     }
 }

@@ -21,27 +21,37 @@ namespace SyncedUI.Platforms
 
         private HINSTANCE hInstance;
         private HWND hwnd;
+        private Graphics graphics;
 
         [UnmanagedCallersOnly(CallConvs = new[] { typeof(CallConvStdcall) })]
         private static nint WindowProc(HWND hWnd, WindowMessage msg, WPARAM wparam, LPARAM lparam)
         {
             if (hosts.ContainsKey(hWnd))
             {
+                //Console.WriteLine(msg.ToString());
+
                 var host = hosts[hWnd];
 
-                if (host.graphics == null)
-                {
-                    host.graphics = host.CreateGraphics();
-                }
+                //if (host.graphics == null)
+                //{
+                //    host.graphics = host.CreateGraphics();
+                //}
 
                 switch (msg)
                 {
-                    case WindowMessage.SIZE:
                     case WindowMessage.PAINT:
+                        PAINTSTRUCT paint;
+                        var hdc = BeginPaint(hWnd, &paint);
+
+                        var graphics = host.graphics ?? Graphics.FromHdc(new IntPtr(hdc));
+
+                        host.Invalidate(graphics);
+
+                        EndPaint(hWnd, &paint);
+
                         return 0;
                 }
 
-                Console.WriteLine(msg.ToString());
             }
             return DefWindowProcW(hWnd, msg, wparam, lparam);
         }

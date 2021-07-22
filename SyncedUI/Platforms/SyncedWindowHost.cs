@@ -15,8 +15,6 @@ namespace SyncedUI.Platforms
     // NOTE: SyncedWindow is the what the user inherits to create an application. SyncedWindowHost provides platform specific functionality to that window.
     internal sealed partial class SyncedWindowHost : IDisposable
     {
-        private Graphics graphics;
-
         private SyncedWindow window;
 
         public SyncedWindowHost(SyncedWindow window)
@@ -29,16 +27,15 @@ namespace SyncedUI.Platforms
 
         public void Dispose()
         {
-            graphics.Dispose();
             DisposeUnmanaged();
         }
 
         public void RunAppLoop()
         {
             window.Layout();
-            graphics.Clear(ColorTranslator.FromHtml("#fff"));
-            graphics.TextRenderingHint = TextRenderingHint.AntiAlias;
-            window.Render(graphics);
+            //graphics.Clear(ColorTranslator.FromHtml("#fff"));
+            //graphics.TextRenderingHint = TextRenderingHint.AntiAlias;
+            //window.Render(graphics);
 
             while (WindowIsOpen())
             {
@@ -48,11 +45,12 @@ namespace SyncedUI.Platforms
 
         public Graphics GetWindowGraphics()
         {
-            return graphics;
+            return null;// graphics;
         }
 
-        private void Invalidate()
+        private void Invalidate(Graphics graphics)
         {
+            window.ClearChildren();
             window.Layout();
             window.Render(graphics);
         }

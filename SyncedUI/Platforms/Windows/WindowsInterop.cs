@@ -411,7 +411,6 @@ namespace SyncedUI.Platforms
             public int y;
         }
 
-
         internal struct BOOL
         {
             int value;
@@ -437,21 +436,7 @@ namespace SyncedUI.Platforms
             }
         }
 
-        //internal struct WNDCLASSEXW
-        //{
-        //    public int cbSize;
-        //    public uint style;
-        //    public delegate* <HWND, WindowMessage, WPARAM, LPARAM, LRESULT> WndProc;
-        //    public int ClsExtra;
-        //    public int WndExtra;
-        //    public HINSTANCE Instance;
-        //    public void* Icon;
-        //    public void* Cursor;
-        //    public void* Brush;
-        //    public char* MenuName;
-        //    public char* ClassName;
-        //}
-        internal unsafe partial struct WNDCLASSEXW
+        internal partial struct WNDCLASSEXW
         {
             public int cbSize;
 
@@ -483,6 +468,24 @@ namespace SyncedUI.Platforms
             //}
         }
 
+        internal struct PAINTSTRUCT
+        {
+            public HDC hdc;
+            public BOOL fErase;
+            public RECT rcPaint;
+            public int fRestore;
+            public int fIncUpdate;
+            public fixed byte rgbReserved[32];
+        }
+
+        internal struct RECT
+        {
+            public nint left;
+            public nint top;
+            public nint right;
+            public nint bottom;
+        }
+
         #region Handles
         // unfortunately there isn't a good way to avoid this code dupication here.
         // All the handles have the same code, But using one type or even just a 'void*' would
@@ -512,6 +515,34 @@ namespace SyncedUI.Platforms
             }
 
             public static bool operator !(HWND value)
+            {
+                return value.Value == null;
+            }
+        }
+        internal struct HDC
+        {
+            void* Value;
+
+            public static implicit operator HDC(void* value)
+            {
+                return new HDC { Value = value };
+            }
+
+            public static implicit operator void*(HDC hInstance)
+            {
+                return hInstance.Value;
+            }
+            public static bool operator true(HDC value)
+            {
+                return value.Value != null;
+            }
+
+            public static bool operator false(HDC value)
+            {
+                return value.Value == null;
+            }
+
+            public static bool operator !(HDC value)
             {
                 return value.Value == null;
             }
@@ -652,6 +683,12 @@ namespace SyncedUI.Platforms
 
         [DllImport("user32", CallingConvention = CallingConvention.Winapi, CharSet = CharSet.Unicode, SetLastError = false)]
         public static extern int MessageBox(HWND hwnd, string description, string title, MessageBoxFlags type);
+        
+        [DllImport("user32", CallingConvention = CallingConvention.Winapi, CharSet = CharSet.Unicode, SetLastError = false)]
+        public static extern HDC BeginPaint(HWND hWnd, PAINTSTRUCT* lpPaint);
+
+        [DllImport("user32", CallingConvention = CallingConvention.Winapi, CharSet = CharSet.Unicode, SetLastError = false)]
+        public static extern BOOL EndPaint(HWND hWnd, PAINTSTRUCT* lpPaint);
 
         #endregion
 
